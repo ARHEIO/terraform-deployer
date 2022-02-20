@@ -1,0 +1,11 @@
+
+steps:
+  - label: "Debug"
+    commands:
+      - ls
+      - pwd
+      - which make
+
+  - label: "Bump version"
+    skip: true
+    command: make version

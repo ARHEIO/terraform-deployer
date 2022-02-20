@@ -1,0 +1,10 @@
+
+steps:
+  - label: "Trigger pipeline"
+    plugins:
+      - chronotc/monorepo-diff#v2.1.2:
+          diff: "git diff --name-only $(git describe --tags --abbrev=0)"
+          watch:
+            - path: "src"
+              config:
+                command: "echo should deploy"
